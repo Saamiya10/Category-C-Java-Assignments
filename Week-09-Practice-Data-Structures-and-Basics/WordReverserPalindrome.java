@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class WordReverserPalindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        if (!sc.hasNext()) return;
+        String word = sc.next();
+        
+        StringBuilder sb = new StringBuilder(word);
+        String reversed = sb.reverse().toString();
+        
+        System.out.println(reversed);
+        if (word.equalsIgnoreCase(reversed)) {
+            System.out.println("palindrome");
+        } else {
+            System.out.println("not a palindrome");
+        }
+    }
+}
